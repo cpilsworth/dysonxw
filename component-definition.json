@@ -146,7 +146,7 @@
                 "template": {
                   "name": "Teaser",
                   "model": "teaser",
-                  "headingType": "h2"
+                  "titleType": "h2"
                 }
               }
             }

@@ -204,6 +204,13 @@
          "value": ""
        },
        {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "titleType",
+        "label": "Title type",
+        "value": "h2"
+      },
+       {
          "component": "text-area",
          "name": "body",
          "value": "",
