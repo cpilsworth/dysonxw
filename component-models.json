@@ -185,5 +185,45 @@
         "valueType": "string"
       }
     ]
-  }
+  },
+  {
+    "id": "teaser",
+    "fields": [
+        {
+         "component": "reference",
+         "valueType": "string",
+         "name": "image",
+         "label": "Image",
+         "multi": false
+       },    
+       {
+         "component": "text-input",
+         "valueType": "string",
+         "name": "title",
+         "label": "Title",
+         "value": ""
+       },
+       {
+         "component": "text-area",
+         "name": "body",
+         "value": "",
+         "label": "Body",
+         "valueType": "string"
+       },
+       {
+        "component": "text-input",
+        "name": "link",
+        "value": "",
+        "label": "Link",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "name": "linkText",
+        "value": "",
+        "label": "Link text",
+        "valueType": "string"
+      }
+     ]
+  }  
 ]
