@@ -232,5 +232,24 @@
         "valueType": "string"
       }
      ]
-  }  
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "accordianLabel",
+        "value": "",
+        "label": "Item Label",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "accordianBody",
+        "value": "",
+        "label": "Item Body",
+        "valueType": "string"
+      }
+    ]
+  }
 ]
