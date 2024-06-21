@@ -1,5 +1,4 @@
 .product-details {
-
     display: flex;
     flex-direction: row;
     gap: 32px;
@@ -19,7 +18,7 @@
         color: var(--dyson-green);
     }
 
-    & .save, .includes, price {
+    & .save, .includes, .price {
         color: var(--dyson-blue);
     }
 
@@ -43,6 +42,7 @@
         & .product-details-info {
             width: 33%;
         }
+
         .product-details-desc {
             flex-direction: column-reverse;
             width: 66%;
@@ -52,7 +52,6 @@
 
 @media (width >= 900px) {
     .product-details {
-
         & > div {
             display: flex;
             flex-direction: row;
