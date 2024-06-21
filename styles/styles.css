@@ -15,7 +15,9 @@
   --link-color: #035fe6;
   --link-hover-color: #136ff6;
   --background-color: white;
-  --light-color: #eee;
+  --light-color: #fbfbfb;
+  --light-border: #ebebeb;
+
   --dark-color: #ccc;
   --text-color: black;
 
@@ -237,8 +239,10 @@ main .section {
 
 /* section metadata */
 main .section.light,
-main .section.highlight {
+main .section.highlight, 
+main .section.reasons-to-buy  {
   background-color: var(--light-color);
+  border: 1px solid var(--light-border);
 }
 
 .stars {
@@ -252,7 +256,7 @@ main .section.highlight {
     content: '★★★★★';
     letter-spacing: 3px;
     background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }

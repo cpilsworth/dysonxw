@@ -21,7 +21,7 @@
         color: var(--dyson-green);
     }
 
-    & .save, .includes  {
+    & .save, .includes, price {
         color: var(--dyson-blue);
     }
 
