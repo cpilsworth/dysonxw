@@ -251,5 +251,17 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "product-details",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "sku",
+        "value": "",
+        "label": "SKU",
+        "valueType": "string"
+      }
+    ]
   }
 ]
