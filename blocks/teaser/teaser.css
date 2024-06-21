@@ -1,0 +1,60 @@
+.teaser > div {
+    position: relative;
+    line-height: 0;;
+  }
+  
+  /* image */
+  .teaser > div .teaser-image {
+    height: fit-content;
+  }
+
+  .teaser p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  
+  /* title */
+  .teaser div .teaser-content {
+    position: absolute;
+    display: grid;
+    place-content: start flex-start;
+    z-index: 1;
+    top: 3rem;
+    left: 144px;
+    width: 41%;
+    height: 100%;
+    line-height: initial;
+  }
+  
+  .teaser.light-text {
+    color: var(--overlay-text-color);
+
+    & p, h1, h2, h3, h4, h5, h6 {
+      color: var(--overlay-text-color);
+      margin-top: 12px;
+    }
+
+    & a.button:any-link {
+      color: var(--overlay-text-color) important!;
+    }
+  }
+  
+  .teaser.light-arrow-cta {
+    & .teaser-content a.button::before {
+      content: url("/icons/arrow-circle-light.svg");
+      position: absolute ;
+      width: 40px;
+      height: 40px;
+      transform: translate(-50px, -7px);
+    }
+  
+    & .teaser-content a.button:any-link {    
+      background-color: unset;
+      font-weight: 400;
+      padding-left: 50px;
+    }
+  }
+  
+  
