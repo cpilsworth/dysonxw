@@ -18,8 +18,8 @@ function ProductDetails(props) {
     <div>
         <div class="product-details-info">
             <picture>
-                <source type="image/webp" srcset="${product.logo}?width=750&amp;format=webply&amp;optimize=medium" />
-                <img loading="eager" alt=${product.title} src="${product.logo}?width=750&amp;format=png&amp;optimize=medium" width="152px"/>
+                <source type="image/webp" srcset="${product.logo}?width=152&amp;format=webply&amp;optimize=medium" />
+                <img loading="eager" alt=${product.title} src="${product.logo}?width=152&amp;format=png&amp;optimize=medium" width="152px"/>
             </picture>
             <p class="save-label">Save £${product.save}</p>
             <div class="rating">
@@ -36,8 +36,8 @@ function ProductDetails(props) {
         <div class="product-details-desc">
             <div class="product-details-media">
                 <picture>
-                    <source type="image/webp" srcset="${product.image}?width=750&amp;format=webply&amp;optimize=medium" />
-                    <img loading="eager" alt=${product.title} src="${product.image}?width=750&amp;format=png&amp;optimize=medium" />
+                    <source type="image/webp" srcset="${product.image}?width=496&amp;format=webply&amp;optimize=medium" />
+                    <img loading="eager" alt=${product.title} src="${product.image}?width=496&amp;format=png&amp;optimize=medium" />
                 </picture>
             </div>
             <div class="product-details-copy">
