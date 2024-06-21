@@ -10,22 +10,11 @@
         gap: 16px;
     }
 
-    & .product-details-info {
-        width: 33%;
-    }
     .product-details-desc {
         display: flex;
         flex-direction: column-reverse;
     }
 
-    .product-details-media {
-        flex: 1 1 40%;
-    }   
-
-    .product-details-copy {
-        flex: 1 2 60%;
-    }
-    
     & .stock {
         color: var(--dyson-green);
     }
@@ -73,6 +62,15 @@
         .product-details-desc {
             flex-direction: row;
             width: 66%;
+        }
+
+
+        .product-details-media {
+            flex: 1 1 40%;
+        }   
+
+        .product-details-copy {
+            flex: 1 2 60%;
         }
     }
 }
