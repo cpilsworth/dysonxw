@@ -1,8 +1,7 @@
   .accordion .accordion-item {
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: #FFF;
     position: relative;
-    /* margin-bottom: 26px; */
   }
 
   .accordion details {
@@ -30,7 +29,6 @@
   
   .accordion .accordion-item-label h2 {
     margin: 0;
-    font-family: Citi-Sans-Text;
     font-size: 28px;
     font-weight: 400;
     list-style: 36px;
@@ -67,7 +65,6 @@
     font-weight: 600;
     padding: 16px 14px;
     margin-left: 14px;
-    font-family: Citi-Sans-Text;
     background-color: #F0F4F7;
   }
   
@@ -90,5 +87,4 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
-    font-family: Citi-Sans-Text;
   }
