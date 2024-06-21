@@ -18,32 +18,31 @@ import ffetch from '../../scripts/ffetch.js';
  */
 function ProductDetails(props) {
     const { product } = props;
-    return html`
-    <div id="product-details">
-        <div id="product-details-info">
+    return html`    
+    <div>
+        <div class="product-details-info">
             <p class="save-label">Save £${product.save}</p>
             <div class="rating">
                 <div class="stars" style="--rating: ${product.save};" aria-label="Rating of this product is ${product.save} out of 5."> ${product.rating}/5</div>
             </div>
             <p class="stock">${product.stock}</p>
-            <p class="previous-price">Was: £${product.previousPrice}</p>
+            <p class="previous-price">Was £${product.previousPrice}</p>
             <p class="price">Price: £${product.price}</p>
             <p class="save">Save: £${product.save}</p>
             <p class="credit">Pay in 3 interest-free payments of £${product.paypal} with PayPal</p>
             <p class="includes">${product.includes}</p>
             <a href="#" class="button">Add to basket</a>
         </div>
-    </div>
-    <div id="product-details-media">
-        <img src=${product.image} alt=${product.title} />
-    </div>
-    <div id="product-details-desc">
-        <h2>${product.title}</h2>
-        <p>${product.description}</p>
-    </div>
-        
-        
-    `;
+        <div class="product-details-desc">
+            <div class="product-details-media">
+                <img src=${product.image} alt=${product.title} />
+            </div>
+            <div class="product-details-copy">
+                <h1>${product.title}</h1>
+                <p>${product.description}</p>
+            </div>
+        </div>
+    </div>`;
 }
 
 // 
