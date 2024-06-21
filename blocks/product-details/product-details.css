@@ -41,6 +41,10 @@
 
         & .product-details-info {
             width: 33%;
+            
+            & img {
+                width: 152px;
+            }
         }
 
         .product-details-desc {
