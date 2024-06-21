@@ -19,7 +19,7 @@ function ProductDetails(props) {
         <div class="product-details-info">
             <picture>
                 <source type="image/webp" srcset="${product.logo}?width=152&amp;format=webply&amp;optimize=medium" />
-                <img loading="eager" alt=${product.title} src="${product.logo}?width=152&amp;format=png&amp;optimize=medium" width="152px"/>
+                <img loading="eager" alt=${product.title} src="${product.logo}?width=152&amp;format=png&amp;optimize=medium" width="152" height="52"/>
             </picture>
             <p class="save-label">Save £${product.save}</p>
             <div class="rating">
