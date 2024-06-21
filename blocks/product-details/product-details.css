@@ -1,0 +1,41 @@
+.product-details {
+
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+
+    & .product-details-info {
+        flex: 3 1 auto;
+    }
+
+    .product-details-media {
+        flex: 1 ;
+    }
+
+    .product-details-desc {
+        flex: 2;
+
+    }
+
+    & .stock {
+        color: var(--dyson-green);
+    }
+
+    & .save, .includes  {
+        color: var(--dyson-blue);
+    }
+
+    & .save-label {
+        background-color: var(--dysn-blue);
+        color: #fff
+    }
+
+    & .previous-price {
+        text-decoration: line-through;
+    }
+}
+
+
+  
+  
+ 
