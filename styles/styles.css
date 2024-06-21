@@ -19,6 +19,17 @@
   --dark-color: #ccc;
   --text-color: black;
 
+  --dyson-blue: #06c;
+  --dyson-green: #79b928;
+
+  --header-background-color: #000;
+  --header-text-color: #fff;
+  --header-link-color: #fff;
+
+  --footer-background-color: #000;
+  --footer-text-color: #fff;
+  --footer-link-color: #fff;
+
   /* fonts */
   --body-font-family: roboto, roboto-fallback;
   --heading-font-family: var(--body-font-family);
@@ -39,6 +50,11 @@
 
   /* nav height */
   --nav-height: 64px;
+
+  /* rating stars */
+  --star-size: 60px;
+  --star-color: #fff;
+  --star-background: #fc0;
 }
 
 @font-face {
@@ -223,4 +239,20 @@ main .section {
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+}
+
+.stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times; 
+  line-height: 1;
+  
+  &::before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
