@@ -2,7 +2,6 @@
   "mappings": [
     "/content/dyson/:/",
     "/content/dyson/configuration:/.helix/config.json",
-    "/content/dyson/hair-care/products:/hair-care/products.json",
     "/content/dyson/products:/products.json"
   ]
 }
