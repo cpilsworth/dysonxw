@@ -17,17 +17,13 @@
   --background-color: white;
   --light-color: #fbfbfb;
   --light-border: #ebebeb;
-
   --dark-color: #ccc;
   --text-color: black;
-
   --dyson-blue: #06c;
   --dyson-green: #79b928;
-
   --header-background-color: #000;
   --header-text-color: #fff;
   --header-link-color: #fff;
-
   --footer-background-color: #000;
   --footer-text-color: #fff;
   --footer-link-color: #fff;
@@ -70,9 +66,9 @@
   src: local('Arial');
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   :root {
-    --heading-font-size-xxl: 44px;
+    --heading-font-size-xxl: 36px;
     --heading-font-size-xl: 36px;
     --heading-font-size-l: 30px;
     --heading-font-size-m: 28px;
@@ -241,6 +237,10 @@ main .section {
   }
 }
 
+main .section:first-child {
+  padding-top: 0;
+}
+
 /* section metadata */
 main .section.light,
 main .section.highlight {
@@ -261,9 +261,10 @@ main .section.awards img {
 
 .stars {
   --percent: calc(var(--rating) / 5 * 100%);
+
   display: inline-block;
   font-size: var(--star-size);
-  font-family: Times; 
+  font-family: Times, serif; 
   line-height: 1;
   
   &::before {
