@@ -1,6 +1,4 @@
-import {
-    html, render
-  } from '../../scripts/preact.js';
+import { html, render } from '../../scripts/preact.js';
 import ffetch from '../../scripts/ffetch.js';
 
 /**
@@ -13,17 +11,19 @@ import ffetch from '../../scripts/ffetch.js';
  * paypal: "160",
  * includes: "Includes complimentary Fast dryer attachment worth £35. Only at Dyson.co.uk",
  * description: ""
- * @param {*} props 
- * @returns 
  */
 function ProductDetails(props) {
     const { product } = props;
-    return html`    
+    return html`
     <div>
         <div class="product-details-info">
+            <picture>
+                <source type="image/webp" srcset="${product.logo}?width=750&amp;format=webply&amp;optimize=medium" />
+                <img alt=${product.title} src="${product.logo}?width=750&amp;format=png&amp;optimize=medium" />
+            </picture>
             <p class="save-label">Save £${product.save}</p>
             <div class="rating">
-                <div class="stars" style="--rating: ${product.save};" aria-label="Rating of this product is ${product.save} out of 5."> ${product.rating}/5</div>
+                <div class="stars" style="--rating: ${product.save};" aria-label="Rating of this product is ${product.save} out of 5."> ${product.rating} / 5</div>
             </div>
             <p class="stock">${product.stock}</p>
             <p class="previous-price">Was £${product.previousPrice}</p>
@@ -35,7 +35,10 @@ function ProductDetails(props) {
         </div>
         <div class="product-details-desc">
             <div class="product-details-media">
-                <img src=${product.image} alt=${product.title} />
+                <picture>
+                    <source type="image/webp" srcset="${product.image}?width=750&amp;format=webply&amp;optimize=medium" />
+                    <img alt=${product.title} src="${product.image}?width=750&amp;format=png&amp;optimize=medium" />
+                </picture>
             </div>
             <div class="product-details-copy">
                 <h1>${product.title}</h1>
@@ -45,19 +48,17 @@ function ProductDetails(props) {
     </div>`;
 }
 
-// 
-
- /**
+/**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
  */
-  export default async function decorate(block) {
+export default async function decorate(block) {
     try {
-    const sku = block.innerText?.trim()
-    const product = await ffetch('/products.json')
-        .filter(e => e.sku === sku).first();
-    block.innerText = '';
-    render(html`<${ProductDetails} product=${product} />`, block);
+        const sku = block.innerText?.trim()
+        const product = await ffetch('/products.json')
+            .filter((e) => e.sku === sku).first();
+        block.innerText = '';
+        render(html`<${ProductDetails} product=${product} />`, block);
     } catch (e) {
         console.error('Error in product-details', e);
     }
