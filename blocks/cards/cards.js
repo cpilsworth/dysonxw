@@ -20,5 +20,16 @@ export default function decorate(block) {
     img.closest('picture').replaceWith(optimizedPic);
   });
   block.textContent = '';
+
+  if (block.parentElement.parentElement.classList.contains('in-the-box')) {
+    const mega = ul.firstChild;
+    const featured = document.createElement('div');
+    featured.className = 'main-in-the-box';
+    featured.append(...mega.children);
+    mega.remove();
+    block.insertAdjacentElement('beforebegin', featured);
+  }
+
   block.append(ul);
 }
+
