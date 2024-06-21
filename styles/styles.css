@@ -255,6 +255,10 @@ main .section.centre {
   text-align: center; 
 }
 
+main .section.awards img {
+  height: 5em;
+}
+
 .stars {
   --percent: calc(var(--rating) / 5 * 100%);
   display: inline-block;

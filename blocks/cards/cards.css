@@ -29,3 +29,56 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+
+/* In the box */
+main .section.in-the-box .cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+main .section.in-the-box .cards ul li {
+  display: block;
+}
+
+main .section.in-the-box:has(> .cards-wrapper) {
+  & div.cards {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  & div.cards ul {
+    flex-wrap: wrap;
+    grid-template-columns: repeat(2, minmax(100px, 50%));
+    & li {
+      display: block;
+    }
+  }
+
+  & div.cards ul li {
+    display: flex;
+    flex-direction: row;
+    height: 110px;
+    & img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+    }
+  }
+}
+
+main .section.reasons-to-buy .cards > ul > li:hover {
+  border: 1px solid #000;
+}
+
+main .section.reasons-to-buy .cards > ul > li:hover {
+  border: 1px solid #000;
+}
+
+@media (width >= 600px) {
+  main .section.three-wide .cards > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
