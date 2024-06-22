@@ -2,6 +2,7 @@
   "mappings": [
     "/content/dyson/:/",
     "/content/dyson/configuration:/.helix/config.json",
-    "/content/dyson/products:/products.json"
+    "/content/dyson/products:/products.json",
+    "/content/dyson/redirects:/redirects.json"
   ]
 }
