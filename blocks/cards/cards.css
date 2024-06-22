@@ -85,6 +85,6 @@ main .section.in-the-box {
   }
 }
 
-main .section.reasons-to-buy .cards > ul > li:hover  {
+main .section.reasons-to-buy .cards > ul > li:hover {
   border: 1px solid #000;
 }
