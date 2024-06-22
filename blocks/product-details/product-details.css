@@ -20,38 +20,21 @@
 
     & .save, .includes, .price {
         color: var(--dyson-blue);
+        
     }
 
-    & .save-label {
+    & .save span {
         background-color: var(--dyson-blue);
-        color: #fff
+        color: #fff;
+        padding: 5px 10px;
+    }
+
+    & .price {
+        font-size: 24px;
     }
 
     & .previous-price {
         text-decoration: line-through;
-    }
-}
-
-@media (width >= 600px) {
-    .product-details {
-        & > div {
-            display: flex;
-            gap: 16px;
-        }
-
-        & .product-details-info {
-            width: 33%;
-
-            & img {
-                width: 152px;
-                height: 52px;
-            }
-        }
-
-        .product-details-desc {
-            flex-direction: column-reverse;
-            width: 66%;
-        }
     }
 }
 

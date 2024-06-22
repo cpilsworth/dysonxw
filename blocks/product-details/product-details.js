@@ -19,16 +19,16 @@ function ProductDetails(props) {
         <div class="product-details-info">
             <picture>
                 <source type="image/webp" srcset="${product.logo}?width=152&amp;format=webply&amp;optimize=medium" />
-                <img loading="eager" alt=${product.title} src="${product.logo}?width=152&amp;format=png&amp;optimize=medium" width="152" height="52"/>
+                <img loading="eager" alt="The logo for ${product.title}" src="${product.logo}?width=152&amp;format=png&amp;optimize=medium" width="152" height="52"/>
             </picture>
             <p class="save-label">Save £${product.save}</p>
             <div class="rating">
-                <div class="stars" style="--rating: ${product.save};" aria-label="Rating of this product is ${product.save} out of 5."> ${product.rating} / 5</div>
+                <div class="stars" style="--rating: ${product.save};" aria-label="Rating of this product is ${product.save} out of 5."><span> ${product.rating} / 5 from 48950 Reviews</span></div>
             </div>
             <p class="stock">${product.stock}</p>
             <p class="previous-price">Was £${product.previousPrice}</p>
             <p class="price">Price: £${product.price}</p>
-            <p class="save">Save: £${product.save}</p>
+            <p class="save"><span>Save: £${product.save}</span></p>
             <p class="credit">Pay in 3 interest-free payments of £${product.paypal} with PayPal</p>
             <p class="includes">${product.includes}</p>
             <a href="#" class="button">Add to basket</a>
@@ -39,7 +39,7 @@ function ProductDetails(props) {
                     <source type="image/webp" srcset="${product.image}?width=315&amp;format=webply&amp;optimize=medium" media="(min-width: 600px)" />
                     <source type="image/webp" srcset="${product.image}?width=496&amp;format=webply&amp;optimize=medium" />
                     <source type="image/png"  srcset="${product.image}?width=315&amp;format=png&amp;optimize=medium" media="(min-width: 600px)" />
-                    <img loading="eager" alt=""  src="${product.image}?width=496&amp;format=png&amp;optimize=medium" width="496" height="744" />
+                    <img loading="eager" alt="The airwrap and all it's accessories" src="${product.image}?width=496&amp;format=png&amp;optimize=medium" width="496" height="744" />
                 </picture>
             </div>
             <div class="product-details-copy">
