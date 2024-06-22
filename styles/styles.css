@@ -256,7 +256,10 @@ main .section.centre {
 }
 
 main .section.awards img {
-  height: 5em;
+  max-height: 5em;
+  height: auto;
+  width: auto;
+  aspect-ratio: auto 750 / 153;
 }
 
 .stars {
