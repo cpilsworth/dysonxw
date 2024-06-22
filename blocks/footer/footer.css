@@ -6,11 +6,11 @@ footer {
 }
 
 footer .footer a:any-link {
-  color: var(--overlay-link-color)
+  color: var(--footer-link-color)
 }
 
 footer .footer a:any-link:hover {
-  color: var(--overlay-link-hover-color);
+  color: var(--footer-link-hover-color);
   text-decoration: none;
 }
 
