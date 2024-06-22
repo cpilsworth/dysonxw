@@ -36,8 +36,10 @@ function ProductDetails(props) {
         <div class="product-details-desc">
             <div class="product-details-media">
                 <picture>
+                    <source type="image/webp" srcset="${product.image}?width=315&amp;format=webply&amp;optimize=medium" media="(min-width: 600px)" />
                     <source type="image/webp" srcset="${product.image}?width=496&amp;format=webply&amp;optimize=medium" />
-                    <img loading="eager" alt=${product.title} src="${product.image}?width=496&amp;format=png&amp;optimize=medium" />
+                    <source type="image/png"  srcset="${product.image}?width=315&amp;format=png&amp;optimize=medium" media="(min-width: 600px)" />
+                    <img loading="eager" alt=""  src="${product.image}?width=496&amp;format=png&amp;optimize=medium" width="496" height="744" />
                 </picture>
             </div>
             <div class="product-details-copy">
