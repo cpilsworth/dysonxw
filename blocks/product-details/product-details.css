@@ -15,7 +15,7 @@
     }
 
     & .stock {
-        color: var(--dyson-green);
+        color: #406215;
     }
 
     & .save, .includes, .price {
@@ -23,7 +23,7 @@
     }
 
     & .save-label {
-        background-color: var(--dysn-blue);
+        background-color: var(--dyson-blue);
         color: #fff
     }
 
