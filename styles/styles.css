@@ -27,6 +27,7 @@
   --footer-background-color: #000;
   --footer-text-color: #fff;
   --footer-link-color: #fff;
+  --button-color: var(--dyson-green);
 
   /* fonts */
   --body-font-family: 'DysonFutura', helvetica, ubuntu, noto, sans-serif;
@@ -54,7 +55,7 @@
   --desktop-min-width: 1025px;
 
   /* rating stars */
-  --star-size: 60px;
+  --star-size: 22px;
   --star-color: #fff;
   --star-background: #fc0;
 }
@@ -159,47 +160,42 @@ a:hover {
   color: var(--link-hover-color);
 }
 
+
 /* buttons */
-a.button:any-link,
-button {
+a.button:any-link, button {
   font-family: var(--body-font-family);
   display: inline-block;
   box-sizing: border-box;
   text-decoration: none;
   border: 2px solid transparent;
-  padding: 5px 30px;
+  padding: 20px 30px;
   text-align: center;
   font-style: normal;
   font-weight: 600;
   cursor: pointer;
   color: var(--background-color);
-  background-color: var(--link-color);
+  background-color: var(--button-color);
+  color: var(--heading-color);
   margin: 16px 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 30px;
 }
 
-a.button:hover,
-a.button:focus,
-button:hover,
-button:focus {
+a.button:hover, a.button:focus, button:hover, button:focus  {
   background-color: var(--link-hover-color);
   cursor: pointer;
 }
 
-button:disabled,
-button:disabled:hover {
-  background-color: var(--light-color);
+button:disabled, button:disabled:hover {
+  background-color: var(--overlay-background-color);
   cursor: unset;
 }
 
-a.button.secondary,
-button.secondary {
+a.button.secondary, button.secondary {
   background-color: unset;
   border: 2px solid currentcolor;
-  color: var(--text-color);
+  color: var(--text-color)
 }
 
 main img {
@@ -267,8 +263,14 @@ main .section.awards img {
 
   display: inline-block;
   font-size: var(--star-size);
-  font-family: Times, serif; 
+  font-family: Times, serif;
   line-height: 1;
+
+  & span {
+    font-family: var(--body-font-family);
+    font-size: 14px;
+    font-weight: 300;
+  }
   
   &::before {
     content: '★★★★★';
