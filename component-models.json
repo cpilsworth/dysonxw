@@ -230,6 +230,24 @@
         "value": "",
         "label": "Link text",
         "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "multiselect",
+        "value": "",
+        "label": "Styles",
+        "description": "Teaser style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Light text",
+            "value": "light-text"
+          },
+          {
+            "name": "Light text CTA",
+            "value": "light-text-cta"
+          }
+        ]
       }
      ]
   },
