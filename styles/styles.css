@@ -173,9 +173,8 @@ a.button:any-link, button {
   font-style: normal;
   font-weight: 600;
   cursor: pointer;
-  color: var(--background-color);
   background-color: var(--button-color);
-  color: var(--heading-color);
+  color: var(--text-color);
   margin: 16px 0;
   white-space: nowrap;
   overflow: hidden;
@@ -183,7 +182,7 @@ a.button:any-link, button {
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
-  background-color: var(--link-hover-color);
+  background-color: var(--button-color);
   cursor: pointer;
 }
 
