@@ -1,16 +1,21 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-
 export default function decorate(block) {
-//   let image = block.querySelector(':scope > div > div:first-child');
-//   image.className = 'teaser-image';
-  
-  // let image = block.querySelector(':scope > div * div');
-  // for (let i = 0; i < image.children.length; i++) {
-  //   let img = image.children[i];
-  //   console.log(img);
-  //   img.className = (i === 0) ? 'teaser-image' : 'teaser-content';
-  // }
+  // get image and set class
+  const image = block.querySelector(':scope > div:first-child');
+  image.className = 'teaser-image';
 
-//   let content = block.querySelector(':scope > div > div:nth-child(2)');
-//   content.className = 'teaser-content';
+  const content = document.createElement('div');
+  content.className = 'teaser-content';
+
+  // remove the div wrappers for each content item & append to single content block
+  const contentItems = block.querySelectorAll(':scope > div:nth-child(n + 2)');
+  contentItems.forEach((div) => {
+    content.appendChild(div.firstElementChild.firstElementChild);
+    div.remove();
+  });
+
+  // add both image and content to a wrapper div
+  const wrapper = document.createElement('div');
+  wrapper.appendChild(image);
+  wrapper.appendChild(content);
+  block.appendChild(wrapper);
 }
