@@ -9,6 +9,10 @@ footer .footer a:any-link {
   color: var(--footer-link-color)
 }
 
+footer .footer li a {
+  line-height: 300%;
+}
+
 footer .footer a:any-link:hover {
   color: var(--footer-link-hover-color);
   text-decoration: none;
@@ -54,6 +58,10 @@ footer .footer div div:nth-child(4) {
       "language language"
       "sections pages"
       "terms    terms";
+  }
+
+  footer .footer li a {
+    line-height: revert;
   }
 
 }
