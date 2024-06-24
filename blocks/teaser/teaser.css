@@ -44,6 +44,13 @@
       color: var(--overlay-text-color) important!;
     }
   }
+
+  .teaser.light-button {
+    & a.button:any-link {
+      background-color: var(--light-button-color);
+      color: var(--text-color);
+    }
+  }
   
   .teaser.light-arrow-cta {
     & .teaser-content a.button::before {

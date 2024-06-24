@@ -29,6 +29,7 @@
   --footer-link-color: #fff;
   --overlay-text-color: #fff;
   --button-color: var(--dyson-green);
+  --light-button-color: #fff;
 
   /* fonts */
   --body-font-family: 'DysonFutura', helvetica, ubuntu, noto, sans-serif;
