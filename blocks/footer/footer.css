@@ -5,12 +5,12 @@ footer {
   font-size: var(--body-font-size-s);
 }
 
-footer .footer a:any-link {
-  color: var(--footer-link-color)
-}
-
 footer .footer li a {
   line-height: 300%;
+}
+
+footer .footer a:any-link {
+  color: var(--footer-link-color)
 }
 
 footer .footer a:any-link:hover {
@@ -61,9 +61,8 @@ footer .footer div div:nth-child(4) {
   }
 
   footer .footer li a {
-    line-height: revert;
+    line-height: 200%;
   }
-
 }
 
 @media (width >= 1025px) {
