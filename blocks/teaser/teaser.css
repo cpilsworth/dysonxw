@@ -27,6 +27,10 @@
     height: 100%;
     line-height: initial;
   }
+
+  .teaser div .teaser-content p {
+    width: 75%;
+  }
   
   .teaser.light-text {
     color: var(--overlay-text-color);
