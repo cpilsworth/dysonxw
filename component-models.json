@@ -233,7 +233,7 @@
       },
       {
         "component": "select",
-        "name": "multiselect",
+        "name": "select",
         "value": "",
         "label": "Styles",
         "description": "Teaser style",
