@@ -232,7 +232,7 @@
         "valueType": "string"
       },
       {
-        "component": "select",
+        "component": "multiselect",
         "name": "classes",
         "value": "",
         "label": "Styles",
@@ -244,8 +244,12 @@
             "value": "light-text"
           },
           {
-            "name": "Light arrow CTA",
-            "value": "light-arrow-cta"
+            "name": "Light buttom",
+            "value": "light-button"
+          },
+          {
+            "name": "Dark text",
+            "value": "dark text"
           }
         ]
       }
