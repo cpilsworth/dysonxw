@@ -118,7 +118,7 @@ header nav[aria-expanded="false"] .nav-hamburger-icon::before,
 header nav[aria-expanded="false"] .nav-hamburger-icon::after {
   height: 2px;
   border-radius: 2px;
-  background: black;
+  background: var(--header-background-color);
 }
 
 header nav[aria-expanded="false"] .nav-hamburger-icon::before {
