@@ -8,9 +8,12 @@ export default function decorate(block) {
 
   // remove the div wrappers for each content item & append to single content block
   const contentItems = block.querySelectorAll(':scope > div:nth-child(n + 2)');
-  contentItems.forEach((div) => {
-    content.appendChild(div.firstElementChild.firstElementChild);
-    div.remove();
+  contentItems?.forEach((div) => {
+    const elem = div?.firstElementChild?.firstElementChild;
+    if (elem || (elem instanceof Node)) {
+      content.appendChild(elem);
+      div.remove();
+    }
   });
 
   // add both image and content to a wrapper div
