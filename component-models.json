@@ -232,8 +232,8 @@
         "valueType": "string"
       },
       {
-        "component": "select",
-        "name": "select",
+        "component": "multiselect",
+        "name": "classes",
         "value": "",
         "label": "Styles",
         "description": "Teaser style",
