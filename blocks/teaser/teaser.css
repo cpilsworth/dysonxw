@@ -27,10 +27,6 @@
     height: 100%;
     line-height: initial;
   }
-
-  .teaser div .teaser-content p {
-    width: 75%;
-  }
   
   .teaser.light-text {
     color: var(--overlay-text-color);
@@ -43,6 +39,10 @@
     & a.button:any-link {
       color: var(--overlay-text-color) important!;
     }
+  }
+
+  .teaser div .teaser-content p {
+    width: 75%;
   }
 
   .teaser.light-button {

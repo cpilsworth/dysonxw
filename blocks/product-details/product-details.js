@@ -13,8 +13,8 @@ import ffetch from '../../scripts/ffetch.js';
  * description: ""
  */
 function ProductDetails(props) {
-    const { product } = props;
-    return html`
+  const { product } = props;
+  return html`
     <div>
         <div class="product-details-info">
             <picture>
@@ -55,13 +55,9 @@ function ProductDetails(props) {
  * @param {Element} block The header block element
  */
 export default async function decorate(block) {
-    try {
-        const sku = block.innerText?.trim()
-        const product = await ffetch('/products.json')
-            .filter((e) => e.sku === sku).first();
-        block.innerText = '';
-        render(html`<${ProductDetails} product=${product} />`, block);
-    } catch (e) {
-        console.error('Error in product-details', e);
-    }
+  const sku = block.innerText?.trim();
+  const product = await ffetch('/products.json')
+    .filter((e) => e.sku === sku).first();
+  block.innerText = '';
+  render(html`<${ProductDetails} product=${product} />`, block);
 }

@@ -20,7 +20,6 @@
 
     & .save, .includes, .price {
         color: var(--dyson-blue);
-        
     }
 
     & .save span {
