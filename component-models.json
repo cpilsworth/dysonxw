@@ -232,11 +232,11 @@
         "valueType": "string"
       },
       {
-        "component": "multiselect",
+        "component": "select",
         "name": "classes",
         "value": "",
         "label": "Styles",
-        "description": "Teaser style",
+        "description": "teaser style",
         "valueType": "string",
         "options": [
           {
@@ -244,8 +244,8 @@
             "value": "light-text"
           },
           {
-            "name": "Light text CTA",
-            "value": "light-text-cta"
+            "name": "Light arrow CTA",
+            "value": "light-arrow-cta"
           }
         ]
       }

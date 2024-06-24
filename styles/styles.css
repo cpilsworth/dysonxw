@@ -27,6 +27,7 @@
   --footer-background-color: #000;
   --footer-text-color: #fff;
   --footer-link-color: #fff;
+  --overlay-text-color: #fff;
   --button-color: var(--dyson-green);
 
   /* fonts */
