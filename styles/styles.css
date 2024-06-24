@@ -280,3 +280,12 @@ main .section.awards img {
     -webkit-text-fill-color: transparent;
   }
 }
+
+/* Full bleed sections */
+main .section.full-bleed {
+  padding: 0;
+}
+
+main .section.full-bleed > div {
+  max-width: unset;  
+}
