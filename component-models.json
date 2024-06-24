@@ -220,14 +220,14 @@
        {
         "component": "text-input",
         "name": "link",
-        "value": "",
+        "value": "#",
         "label": "Link",
         "valueType": "string"
       },
       {
         "component": "text-input",
         "name": "linkText",
-        "value": "",
+        "value": "Learn more",
         "label": "Link text",
         "valueType": "string"
       },
