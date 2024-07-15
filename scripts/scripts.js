@@ -127,6 +127,9 @@ async function loadEager(doc) {
   document.documentElement.lang = 'en';
 
   decorateTemplateAndTheme();
+
+  await window.hlx.plugins.run('loadEager');
+
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
@@ -162,6 +165,8 @@ async function loadLazy(doc) {
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
 
+  window.hlx.plugins.run('loadLazy');
+
   sampleRUM('lazy');
   sampleRUM.observe(main.querySelectorAll('div[data-block-name]'));
   sampleRUM.observe(main.querySelectorAll('picture > img'));
@@ -172,14 +177,20 @@ async function loadLazy(doc) {
  * without impacting the user experience.
  */
 function loadDelayed() {
-  // eslint-disable-next-line import/no-cycle
-  window.setTimeout(() => import('./delayed.js'), 3000);
+  window.setTimeout(() => {
+    window.hlx.plugins.load('delayed');
+    window.hlx.plugins.run('loadDelayed');
+    // eslint-disable-next-line import/no-cycle
+    return import('./delayed.js');
+  }, 3000);
   // load anything that can be postponed to the latest here
   import('./sidekick.js').then(({ initSidekick }) => initSidekick());
 }
 
 async function loadPage() {
+  await window.hlx.plugins.load('eager');
   await loadEager(document);
+  await window.hlx.plugins.load('lazy');
   await loadLazy(document);
   loadDelayed();
 }
