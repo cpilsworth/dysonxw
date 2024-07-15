@@ -12,6 +12,8 @@ import {
   loadCSS,
   toClassName,
   getMetadata,
+  loadScript,
+  toCamelCase,
 } from './aem.js';
 
 const LCP_BLOCKS = ['product-details']; // add your LCP blocks to the list
@@ -37,6 +39,17 @@ export function getAllMetadata(scope) {
       return res;
     }, {});
 }
+
+// Define an execution context
+const pluginContext = {
+  getAllMetadata,
+  getMetadata,
+  loadCSS,
+  loadScript,
+  sampleRUM,
+  toCamelCase,
+  toClassName,
+};
 
 window.hlx.plugins.add('experimentation', {
   condition: () => getMetadata('experiment')
@@ -128,7 +141,7 @@ async function loadEager(doc) {
 
   decorateTemplateAndTheme();
 
-  await window.hlx.plugins.run('loadEager');
+  await window.hlx.plugins.run('loadEager', pluginContext);
 
   const main = doc.querySelector('main');
   if (main) {
@@ -165,7 +178,7 @@ async function loadLazy(doc) {
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
 
-  window.hlx.plugins.run('loadLazy');
+  window.hlx.plugins.run('loadLazy', pluginContext);
 
   sampleRUM('lazy');
   sampleRUM.observe(main.querySelectorAll('div[data-block-name]'));
@@ -179,7 +192,7 @@ async function loadLazy(doc) {
 function loadDelayed() {
   window.setTimeout(() => {
     window.hlx.plugins.load('delayed');
-    window.hlx.plugins.run('loadDelayed');
+    window.hlx.plugins.run('loadDelayed', pluginContext);
     // eslint-disable-next-line import/no-cycle
     return import('./delayed.js');
   }, 3000);
