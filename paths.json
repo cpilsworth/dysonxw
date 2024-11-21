@@ -1,7 +1,7 @@
 {
   "mappings": [
     "/content/dyson/:/",
-    "/content/dyson/configuration:/.helix/config.json",
+    "/content/dyson/config:/.helix/config.json",
     "/content/dyson/headers:/.helix/headers.json",
     "/content/dyson/redirects:/redirects.json",
     "/content/dyson/metadata:/metadata.json",
