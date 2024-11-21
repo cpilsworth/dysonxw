@@ -4,7 +4,9 @@
       "id": "aemedit",
       "title": "Edit",
       "environments": [ "dev", "preview", "live" ],
-      "event": "aemedit"
+      "event": "aemedit",
+      "editUrlLabel": "Edit in AEM",
+      "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open"
     }
   ]
 }
