@@ -6,7 +6,7 @@
     "/content/dyson/redirects:/redirects.json",
     "/content/dyson/metadata:/metadata.json",
     "/content/dyson/products:/products.json",
-    "/content/dyson/query-index.json:/query-index.json"
+    "/content/dyson/query-index:/query-index.json"
   ],
   "includes": [
     "/content/dyson/"
